@@ -1,0 +1,44 @@
+@import 'normalize.css';
+body,
+div,
+span,
+header,
+section,
+aside,
+footer,
+main,
+input,
+button,
+article,
+a,
+ul,
+li,
+ol,
+dd,
+dt,
+dl {
+  box-sizing: border-box;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+ul li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-width: 1200px;
+  background-color: #f6f6f6;
+}
+body::selection {
+  background-color: #1393ca;
+}
+
+.heart {
+  width: 1200px;
+  margin: 0 auto;
+}

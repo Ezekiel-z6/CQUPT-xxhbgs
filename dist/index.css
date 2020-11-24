@@ -1,0 +1,147 @@
+@charset "UTF-8";
+@import 'normalize.css';
+@import '../font/index/iconfont.css';
+body,
+div,
+span,
+header,
+section,
+aside,
+footer,
+main,
+input,
+button,
+article,
+a,
+ul,
+li,
+ol,
+dd,
+dt,
+dl {
+  box-sizing: border-box;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+ul li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-width: 1200px;
+  background-color: #f6f6f6;
+}
+body::selection {
+  background-color: #1393ca;
+}
+
+.heart {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+header.head .head-top {
+  height: 148px;
+  padding-bottom: 33px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+header.head .head-top img {
+  height: 85px;
+}
+header.head .head-top .search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+header.head .head-top .search::before {
+  content: "";
+  font-family: "iconfont";
+  display: block;
+  position: absolute;
+  line-height: 30px;
+  top: 0;
+  left: 10px;
+  color: #dcdcdc;
+}
+header.head .head-top .search input {
+  margin: 0;
+  padding: 0 0 0 35px;
+  border: 1px solid #dedede;
+  height: 30px;
+  width: 263px;
+  border-radius: 100px 0 0 100px;
+  outline: none;
+}
+header.head .head-top .search input::placeholder {
+  color: #b4b4b4;
+}
+header.head .head-top .search button {
+  margin: 0;
+  padding: 0;
+  width: 77px;
+  height: 30px;
+  background-color: #fc8739;
+  border: none;
+  outline: none;
+  border-radius: 1000px;
+  color: #fff;
+  font-size: 17px;
+  letter-spacing: 0.3;
+  transform: translateX(-45px);
+  user-select: none;
+  cursor: pointer;
+}
+header.head .head-nav {
+  background-color: #1393ca;
+  user-select: none;
+  height: 41px;
+}
+header.head .head-nav .menu {
+  display: flex;
+  justify-content: space-between;
+}
+header.head .head-nav .menu > li {
+  flex: 1;
+  margin: 0 10px;
+  font-size: 22px;
+  line-height: 41px;
+  height: 41px;
+  text-align: center;
+  background-color: #1393ca;
+  transition: all 0.1s;
+}
+header.head .head-nav .menu > li:hover {
+  background-color: #fc8739;
+}
+header.head .head-nav .menu > li a {
+  color: #fff;
+  transition: color 0.1s;
+  text-decoration: none;
+}
+header.head .head-nav .menu > li a:hover {
+  color: #fff;
+}
+header.head .head-nav .menu > li .menu-sub li {
+  height: 0;
+  overflow: hidden;
+  transition: all 0.2s;
+  line-height: 27px;
+  background-color: #39bffd;
+}
+header.head .head-nav .menu > li:hover .menu-sub li {
+  background-color: #39bffd;
+  transition: all 0.1s;
+  height: 29px;
+  border-bottom: 2px solid #23a8f6;
+}
+header.head .head-nav .menu > li:hover .menu-sub li:hover {
+  background-color: #fc8739;
+}
