@@ -45,6 +45,13 @@ body::selection {
   margin: 0 auto;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
+}
+
 header.head .head-top {
   height: 148px;
   padding-bottom: 33px;
