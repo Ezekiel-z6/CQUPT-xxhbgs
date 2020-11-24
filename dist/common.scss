@@ -1,5 +1,5 @@
 @import 'normalize.css';
-
+@import '../font/index/iconfont.css';
 
 // 定义一些颜色
 $background-color:#f6f6f6;
@@ -83,4 +83,175 @@ body {
 .heart {
   width: $heart;
   margin: 0 auto;
+}
+
+
+
+$header-top:148px;
+
+body{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
+}
+
+header.head {
+  .head-top {
+    height: $header-top;
+    padding-bottom: 33px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    img {
+      height: 85px;
+    }
+
+    .search {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+
+      &::before {
+        content: "\e607";
+        font-family: 'iconfont';
+        display: block;
+        position: absolute;
+        line-height: 30px;
+        top: 0;
+        left: 10px;
+        color: #dcdcdc;
+      }
+
+      input {
+        margin: 0;
+        padding: 0 0 0 35px;
+        border: 1px solid $border-color;
+        height: 30px;
+        width: 263px;
+        border-radius: 100px 0 0 100px;
+        outline: none;
+
+        &::placeholder {
+          color: #b4b4b4;
+        }
+      }
+
+      button {
+        margin: 0;
+        padding: 0;
+        width: 77px;
+        height: 30px;
+        background-color: $orange;
+        border: none;
+        outline: none;
+        border-radius: 1000px;
+        color: #fff;
+        font-size: 17px;
+        letter-spacing: .3;
+        transform: translateX(-45px);
+        user-select: none;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .head-nav {
+    background-color: $main-blue;
+    user-select: none;
+    height: 41px;
+
+    .menu {
+      display: flex;
+      justify-content: space-between;
+
+      &>li {
+        flex: 1;
+        margin: 0 10px;
+        font-size: 22px;
+        line-height: 41px;
+        height: 41px;
+        text-align: center;
+        @include hover-menu($main-blue, $orange);
+
+        a {
+          @include hover-link(#fff, #fff);
+        }
+
+        .menu-sub li {
+          height: 0;
+          overflow: hidden;
+          transition: all .2s;
+          line-height: 27px;
+          background-color: $sub-blue;
+        }
+
+        &:hover .menu-sub li {
+          @include hover-menu($sub-blue, $orange);
+          height: 29px;
+          border-bottom: 2px solid #23a8f6;
+        }
+      }
+
+    }
+  }
+}
+
+footer.foot{
+  height: 223px;
+  background-color: $bottom-blue;
+  overflow: hidden;
+  .foot-container{
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    height: 223px;
+    .foot-info{
+      overflow: hidden;
+      .foot-links{
+        margin-top: 46px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        li{
+          font-size: 24px;
+          margin: 15px 0 20px 0;
+          a{
+            display: block;
+            padding: 0 15px;
+            border-right: 1px solid #fff;
+            @include hover-link(#fff);
+          }
+          &:last-child{
+            a{
+              border: 0;
+            }
+          }
+        }
+      }
+      p{
+        margin: 0;
+        color: #fff;
+        font-size: 24px;
+      }
+      .foot-copyright{
+        margin-top: 5px;
+      }
+      .foot-record{
+        margin-top: 24px;
+      }
+    }
+    .qr-code{
+      position: absolute;
+      top: 47px;
+      right: 21px;
+      img{
+        width: 151px;
+        height: 151px;
+        background-color: pink;
+      }
+    }
+  }
 }
