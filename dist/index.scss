@@ -105,3 +105,60 @@ header.head {
     }
   }
 }
+
+footer.foot{
+  height: 223px;
+  background-color: $bottom-blue;
+  overflow: hidden;
+  .foot-container{
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    height: 223px;
+    .foot-info{
+      overflow: hidden;
+      .foot-links{
+        margin-top: 46px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        li{
+          font-size: 24px;
+          margin: 15px 0 20px 0;
+          a{
+            display: block;
+            padding: 0 15px;
+            border-right: 1px solid #fff;
+            @include hover-link(#fff);
+          }
+          &:last-child{
+            a{
+              border: 0;
+            }
+          }
+        }
+      }
+      p{
+        margin: 0;
+        color: #fff;
+        font-size: 24px;
+      }
+      .foot-copyright{
+        margin-top: 5px;
+      }
+      .foot-record{
+        margin-top: 24px;
+      }
+    }
+    .qr-code{
+      position: absolute;
+      top: 47px;
+      right: 21px;
+      img{
+        width: 151px;
+        height: 151px;
+        background-color: pink;
+      }
+    }
+  }
+}

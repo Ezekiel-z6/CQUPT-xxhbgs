@@ -145,3 +145,63 @@ header.head .head-nav .menu > li:hover .menu-sub li {
 header.head .head-nav .menu > li:hover .menu-sub li:hover {
   background-color: #fc8739;
 }
+
+footer.foot {
+  height: 223px;
+  background-color: #0387eb;
+  overflow: hidden;
+}
+footer.foot .foot-container {
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  height: 223px;
+}
+footer.foot .foot-container .foot-info {
+  overflow: hidden;
+}
+footer.foot .foot-container .foot-info .foot-links {
+  margin-top: 46px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+}
+footer.foot .foot-container .foot-info .foot-links li {
+  font-size: 24px;
+  margin: 15px 0 20px 0;
+}
+footer.foot .foot-container .foot-info .foot-links li a {
+  display: block;
+  padding: 0 15px;
+  border-right: 1px solid #fff;
+  color: #fff;
+  transition: color 0.1s;
+  text-decoration: none;
+}
+footer.foot .foot-container .foot-info .foot-links li a:hover {
+  color: #fff;
+}
+footer.foot .foot-container .foot-info .foot-links li:last-child a {
+  border: 0;
+}
+footer.foot .foot-container .foot-info p {
+  margin: 0;
+  color: #fff;
+  font-size: 24px;
+}
+footer.foot .foot-container .foot-info .foot-copyright {
+  margin-top: 5px;
+}
+footer.foot .foot-container .foot-info .foot-record {
+  margin-top: 24px;
+}
+footer.foot .foot-container .qr-code {
+  position: absolute;
+  top: 47px;
+  right: 21px;
+}
+footer.foot .foot-container .qr-code img {
+  width: 151px;
+  height: 151px;
+  background-color: pink;
+}
