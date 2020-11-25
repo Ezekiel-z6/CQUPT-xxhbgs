@@ -1,5 +1,15 @@
 @import 'normalize.css';
-@import '../font/index/iconfont.css';
+
+@font-face {
+  font-family: 'iconfont';
+  /* project id 1927050 */
+  src: url('//at.alicdn.com/t/font_1927050_c5do4jdrboh.eot');
+  src: url('//at.alicdn.com/t/font_1927050_c5do4jdrboh.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_1927050_c5do4jdrboh.woff2') format('woff2'),
+    url('//at.alicdn.com/t/font_1927050_c5do4jdrboh.woff') format('woff'),
+    url('//at.alicdn.com/t/font_1927050_c5do4jdrboh.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_1927050_c5do4jdrboh.svg#iconfont') format('svg');
+}
 
 // 定义一些颜色
 $background-color:#f6f6f6;
