@@ -214,3 +214,173 @@ footer.foot .foot-container .qr-code img {
   height: 151px;
   background-color: pink;
 }
+
+main .banner {
+  height: 642px;
+  background-color: pink;
+}
+main .content {
+  background-image: url("../imgs/bg.png");
+  background-size: cover;
+  background-position: 50% 50%;
+  border: 1px solid transparent;
+}
+main .content .heart {
+  background-color: #fff;
+  margin-bottom: 40px;
+  padding: 40px 20px;
+}
+main .content .heart .fn-area {
+  user-select: none;
+}
+main .content .heart .fn-area div {
+  border-bottom: 1px solid #dedede;
+  text-align: center;
+}
+main .content .heart .fn-area div div {
+  background-color: #1393ca;
+  color: #fff;
+  font-size: 28px;
+  line-height: 55px;
+  display: inline-block;
+  height: 55px;
+  width: 160px;
+  margin: 0 auto;
+  position: relative;
+}
+main .content .heart .fn-area div div::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 8.5px solid #1393ca;
+  border-width: 8.5px 6.5px 8.5px 6.5px;
+  border-style: solid;
+  bottom: -17px;
+  left: 71px;
+}
+main .content .heart .fn-area ul.it-nav {
+  margin-top: 20px;
+  display: flex;
+}
+main .content .heart .fn-area ul.it-nav li {
+  flex: 1;
+  text-align: center;
+  font-size: 22px;
+  height: 55px;
+  line-height: 55px;
+  background-color: #ebebeb;
+}
+main .content .heart .fn-area ul.it-nav li:not(:last-child) {
+  border-right: 2px solid #f6f6f6;
+}
+main .content .heart .fn-area ul.it-nav li:hover {
+  background-color: #fc8739;
+  color: #fff;
+}
+main .content .heart .news-area {
+  display: flex;
+  justify-content: space-between;
+}
+main .content .heart .news-area .pic {
+  height: 375px;
+  width: 525px;
+  background-color: pink;
+}
+main .content .heart .news-area .news {
+  width: 606px;
+}
+main .content .heart .news-area .news .selection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .content .heart .news-area .news .selection ul {
+  display: flex;
+}
+main .content .heart .news-area .news .selection ul li {
+  background-color: #e4e4e4;
+  color: #fff;
+  font-size: 28px;
+  line-height: 55px;
+  text-align: center;
+  height: 55px;
+  width: 156px;
+  margin: 0 auto;
+  position: relative;
+}
+main .content .heart .news-area .news .selection ul li::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: transparent;
+  border-top: 8.5px solid #e4e4e4;
+  border-width: 8.5px 6.5px 8.5px 6.5px;
+  bottom: -17px;
+  left: 71px;
+}
+main .content .heart .news-area .news .selection ul li[active] {
+  background-color: #1393ca;
+}
+main .content .heart .news-area .news .selection ul li[active]::after {
+  border-top: 8.5px solid #1393ca;
+}
+main .content .heart .news-area .news .selection span {
+  color: #666666;
+  border: 1px solid #1393ca;
+  display: inline-block;
+  height: 26px;
+  width: 70px;
+  text-align: center;
+  line-height: 26px;
+}
+main .content .heart .news-area .news .selection span a {
+  color: #666;
+  transition: color 0.1s;
+  text-decoration: none;
+}
+main .content .heart .news-area .news .selection span a:hover {
+  color: #666;
+}
+main .content .heart .news-area .news .news-title {
+  padding-top: 12px;
+}
+main .content .heart .news-area .news .news-title li {
+  line-height: 40px;
+  height: 40px;
+  border-bottom: 1px dashed #e5e5e5;
+}
+main .content .heart .news-area .news .news-title li:last-of-type {
+  border: none;
+}
+main .content .heart .news-area .news .news-title li a {
+  display: flex;
+  font-size: 16px;
+  align-items: center;
+  justify-content: space-between;
+  color: #666666;
+  transition: color 0.1s;
+  text-decoration: none;
+}
+main .content .heart .news-area .news .news-title li a span:nth-child(1) {
+  display: flex;
+  align-items: center;
+}
+main .content .heart .news-area .news .news-title li a span:nth-of-type(1)::before {
+  content: "";
+  border: solid;
+  display: inline-block;
+  border-width: 8px 6px 8px 6px;
+  border-color: #d2d2d2 transparent transparent transparent;
+  border-style: solid;
+  transform: rotate(-90deg);
+}
+main .content .heart .news-area .news .news-title li a:hover span:nth-of-type(1)::before {
+  content: "";
+  border-color: #c81b15 transparent transparent transparent;
+}
+main .content .heart .news-area .news .news-title li a:hover {
+  color: #c81b15;
+}
