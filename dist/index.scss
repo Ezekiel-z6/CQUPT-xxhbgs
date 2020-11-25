@@ -1,25 +1,30 @@
 @import './common.scss';
 
-main{
-  .banner{
+main {
+  .banner {
     height: 642px;
     background-color: pink;
   }
-  .content{
+
+  .content {
     background-image: url('../imgs/bg.png');
     background-size: cover;
     background-position: 50% 50%;
-    border:1px solid transparent;
-    .heart{
+    border: 1px solid transparent;
+
+    .heart {
       background-color: #fff;
       margin-bottom: 40px;
-      padding:40px 20px;
-      .fn-area{
+      padding: 40px 20px;
+
+      .fn-area {
         user-select: none;
-        div{
+
+        div {
           border-bottom: 1px solid #dedede;
           text-align: center;
-          div{
+
+          div {
             background-color: $main-blue;
             color: #fff;
             font-size: 28px;
@@ -27,61 +32,71 @@ main{
             display: inline-block;
             height: 55px;
             width: 160px;
-            margin:0 auto;
+            margin: 0 auto;
             position: relative;
-            &::after{
+
+            &::after {
               content: '';
               position: absolute;
-              width:0;
-              height:0;
+              width: 0;
+              height: 0;
               border-top: 8.5px solid $main-blue;
-              border-width:8.5px 6.5px 8.5px 6.5px;
-              border-style:solid;
+              border-width: 8.5px 6.5px 8.5px 6.5px;
+              border-style: solid;
               bottom: -17px;
               left: 71px;
             }
           }
         }
-        ul.it-nav{
+
+        ul.it-nav {
           margin-top: 20px;
           display: flex;
-          li{
+
+          li {
             flex: 1;
             text-align: center;
             font-size: 22px;
-            height:55px;
+            height: 55px;
             line-height: 55px;
             background-color: #ebebeb;
-            &:not(:last-child){
+
+            &:not(:last-child) {
               border-right: 2px solid #f6f6f6;
             }
-            &:hover{
+
+            &:hover {
               background-color: $orange;
-              color:#fff;
+              color: #fff;
             }
           }
         }
-        ul.it-btn{
 
-        }
+        ul.it-btn {}
       }
-      .news-area{
+
+      .news-area {
         display: flex;
         justify-content: space-between;
-        .pic{
+
+        .pic {
           height: 375px;
           width: 525px;
           background-color: pink;
         }
-        .news{
+
+        .news {
           width: 606px;
-          .selection{
+
+          .selection {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            ul{
+
+            ul {
               display: flex;
-              li{
+
+              li {
                 background-color: #e4e4e4;
                 color: #fff;
                 font-size: 28px;
@@ -89,29 +104,33 @@ main{
                 text-align: center;
                 height: 55px;
                 width: 156px;
-                margin:0 auto;
+                margin: 0 auto;
                 position: relative;
-                &::after{
+
+                &::after {
                   content: '';
                   position: absolute;
-                  width:0;
-                  height:0;
-                  border-style:solid;
-                  border-color:transparent;
+                  width: 0;
+                  height: 0;
+                  border-style: solid;
+                  border-color: transparent;
                   border-top: 8.5px solid #e4e4e4;
-                  border-width:8.5px 6.5px 8.5px 6.5px;
+                  border-width: 8.5px 6.5px 8.5px 6.5px;
                   bottom: -17px;
                   left: 71px;
                 }
-                &[active]{
+
+                &[active] {
                   background-color: $main-blue;
-                  &::after{
-                    border-top:8.5px solid $main-blue;
+
+                  &::after {
+                    border-top: 8.5px solid $main-blue;
                   }
                 }
               }
             }
-            span{
+
+            span {
               color: #666666;
               border: 1px solid #1393ca;
               display: inline-block;
@@ -119,45 +138,54 @@ main{
               width: 70px;
               text-align: center;
               line-height: 26px;
-              a{
-                @include hover-link(#666,#666)
+
+              a {
+                @include hover-link(#666, #666)
               }
             }
           }
-          .news-title{
+
+          .news-title {
             padding-top: 12px;
-            li{
+
+            li {
               line-height: 40px;
               height: 40px;
               border-bottom: 1px dashed #e5e5e5;
-              &:last-of-type{
-                border:none;
+
+              &:last-of-type {
+                border: none;
               }
-              a{
+
+              a {
                 display: flex;
                 font-size: 16px;
                 align-items: center;
                 justify-content: space-between;
-                span:nth-child(1){
-                  display:flex;
+
+                span:nth-child(1) {
+                  display: flex;
                   align-items: center;
                 }
-                span:nth-of-type(1)::before{
-                  content:'';
-                  border:solid;
+
+                span:nth-of-type(1)::before {
+                  content: '';
+                  border: solid;
                   display: inline-block;
-                  border-width:8px 6px 8px 6px;
-                  border-color:#d2d2d2 transparent transparent transparent ;
+                  border-width: 8px 6px 8px 6px;
+                  border-color: #d2d2d2 transparent transparent transparent;
                   border-style: solid;
                   transform: rotate(-90deg);
                 }
-                &:hover{
-                  span:nth-of-type(1)::before{
-                    content:'';
-                    border-color:#c81b15 transparent transparent transparent ;
+
+                &:hover {
+                  span:nth-of-type(1)::before {
+                    content: '';
+                    border-color: #c81b15 transparent transparent transparent;
                   }
                 }
-                @include hover-link(#666666,#c81b15);
+
+                @include hover-link(#666666, #c81b15);
               }
             }
           }
@@ -165,4 +193,4 @@ main{
       }
     }
   }
-} 
+}
