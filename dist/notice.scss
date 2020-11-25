@@ -1,0 +1,108 @@
+@import './common.scss';
+
+main {
+  flex: 1;
+  width: 1334px;
+  margin: auto;
+  display: flex;
+  padding-top: 50px;
+  background-color: #fff;
+
+  aside {
+    width: 271px;
+    text-align: center;
+    margin-left: 46px;
+    font-size: 20px;
+
+    .aside-hd {
+      height: 90px;
+      line-height: 90px;
+      background-color: #1393ca;
+      color: #fff;
+      border: 2px solid #f0f0f0;
+      border-top: 0;
+    }
+
+    .aside-bd {
+      li {
+        a {
+          display: block;
+          height: 90px;
+          line-height: 90px;
+          @include hover-link(#000);
+          border: 2px solid #f0f0f0;
+          border-top: 0;
+        }
+      }
+    }
+  }
+
+  article {
+    width: 866px;
+    min-height: 400px;
+    margin-left: 54px;
+    margin-bottom: 58px;
+
+    .notice-list {
+      li {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 18px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #dddddd;
+
+        .date {
+          width: 94px;
+          text-align: center;
+
+          .date-day {
+            height: 58px;
+            line-height: 58px;
+            background-color: #e4e4e4;
+            color: #808080;
+            font-size: 27px;
+          }
+
+          .date-yearmonth {
+            height: 43px;
+            line-height: 43px;
+            background-color: #3d8cd5;
+            font-size: 20px;
+            color: #fff;
+          }
+        }
+
+        .notice-info {
+          width: 759px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+
+          a {
+            display: block;
+            font-size: 18px;
+            font-weight: 700;
+            @include hover-link(#000);
+          }
+
+          .describe {
+            font-size: 12px;
+            color: #7b7b7b;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+          }
+        }
+      }
+
+      & li:first-child {
+        margin-top: 0;
+      }
+
+      & li:last-child {
+        margin-bottom: 60px;
+      }
+    }
+  }
+}

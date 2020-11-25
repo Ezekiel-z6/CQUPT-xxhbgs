@@ -1,0 +1,48 @@
+@import './common.scss';
+
+main {
+  flex: 1;
+  width: 1334px;
+  margin: auto;
+  display: flex;
+  padding-top: 50px;
+  background-color: #fff;
+
+  aside {
+    width: 271px;
+    text-align: center;
+    margin-left: 46px;
+    font-size: 20px;
+
+    .aside-hd {
+      height: 90px;
+      line-height: 90px;
+      background-color: #1393ca;
+      color: #fff;
+      border: 2px solid #f0f0f0;
+      border-top: 0;
+    }
+
+    .aside-bd {
+      li {
+        a {
+          display: block;
+          height: 90px;
+          line-height: 90px;
+          @include hover-link(#000);
+          border: 2px solid #f0f0f0;
+          border-top: 0;
+        }
+      }
+    }
+  }
+
+  article {
+    width: 866px;
+    min-height: 400px;
+    background-color: pink;
+    margin-left: 54px;
+    margin-bottom: 58px;
+    padding: 0 38px 0 44px;
+  }
+}
