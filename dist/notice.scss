@@ -50,6 +50,7 @@ main {
         margin-top: 18px;
         padding-bottom: 15px;
         border-bottom: 1px solid #dddddd;
+
         .date {
           width: 94px;
           text-align: center;
@@ -94,10 +95,12 @@ main {
           }
         }
       }
-      & li:first-child{
+
+      & li:first-child {
         margin-top: 0;
       }
-      & li:last-child{
+
+      & li:last-child {
         margin-bottom: 60px;
       }
     }
