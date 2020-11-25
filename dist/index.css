@@ -219,25 +219,25 @@ main .banner {
   height: 642px;
   background-color: pink;
 }
-main .content {
+main > .content {
   background-image: url("../imgs/bg.png");
   background-size: cover;
   background-position: 50% 50%;
   border: 1px solid transparent;
 }
-main .content .heart {
+main > .content .heart {
   background-color: #fff;
   margin-bottom: 40px;
   padding: 40px 20px;
 }
-main .content .heart .fn-area {
+main > .content .heart .fn-area {
   user-select: none;
 }
-main .content .heart .fn-area div {
+main > .content .heart .fn-area div.it {
   border-bottom: 1px solid #dedede;
   text-align: center;
 }
-main .content .heart .fn-area div div {
+main > .content .heart .fn-area div.it div {
   background-color: #1393ca;
   color: #fff;
   font-size: 28px;
@@ -248,7 +248,7 @@ main .content .heart .fn-area div div {
   margin: 0 auto;
   position: relative;
 }
-main .content .heart .fn-area div div::after {
+main > .content .heart .fn-area div.it div::after {
   content: "";
   position: absolute;
   width: 0;
@@ -259,46 +259,101 @@ main .content .heart .fn-area div div::after {
   bottom: -17px;
   left: 71px;
 }
-main .content .heart .fn-area ul.it-nav {
+main > .content .heart .fn-area ul.it-nav {
   margin-top: 20px;
   display: flex;
 }
-main .content .heart .fn-area ul.it-nav li {
+main > .content .heart .fn-area ul.it-nav li {
   flex: 1;
   text-align: center;
   font-size: 22px;
   height: 55px;
   line-height: 55px;
   background-color: #ebebeb;
+  cursor: pointer;
 }
-main .content .heart .fn-area ul.it-nav li:not(:last-child) {
+main > .content .heart .fn-area ul.it-nav li:not(:last-child) {
   border-right: 2px solid #f6f6f6;
 }
-main .content .heart .fn-area ul.it-nav li:hover {
+main > .content .heart .fn-area ul.it-nav li.active {
   background-color: #fc8739;
   color: #fff;
 }
-main .content .heart .news-area {
+main > .content .heart .fn-area .it-btn ul {
+  display: none;
+  margin-top: 38px;
+}
+main > .content .heart .fn-area .it-btn ul.active {
+  display: flex;
+  justify-content: space;
+  flex-wrap: wrap;
+}
+main > .content .heart .fn-area .it-btn ul li {
+  display: flex;
+  flex-direction: column;
+  width: 193.33px;
+  height: 250px;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid transparent;
+}
+main > .content .heart .fn-area .it-btn ul li div {
+  background-color: #1393ca;
+  height: 120px;
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10000px;
+  overflow: hidden;
+  position: relative;
+  transition: background-color 0.1s;
+  cursor: pointer;
+}
+main > .content .heart .fn-area .it-btn ul li div::before {
+  content: "";
+  display: block;
+  height: 105px;
+  width: 105px;
+  border-radius: 1000px;
+  border: 1px solid #fff;
+  position: absolute;
+  top: 6.5px;
+  left: 6.5px;
+}
+main > .content .heart .fn-area .it-btn ul li div:hover {
+  background-color: #fc8739;
+}
+main > .content .heart .fn-area .it-btn ul li span {
+  display: block;
+  padding: 0 30px;
+  margin-top: 25px;
+  font-size: 20px;
+  color: #262626;
+  text-align: center;
+  line-height: 28px;
+}
+main > .content .heart .news-area {
   display: flex;
   justify-content: space-between;
 }
-main .content .heart .news-area .pic {
+main > .content .heart .news-area .pic {
   height: 375px;
   width: 525px;
   background-color: pink;
 }
-main .content .heart .news-area .news {
+main > .content .heart .news-area .news {
   width: 606px;
 }
-main .content .heart .news-area .news .selection {
+main > .content .heart .news-area .news .selection {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-main .content .heart .news-area .news .selection ul {
+main > .content .heart .news-area .news .selection ul {
   display: flex;
 }
-main .content .heart .news-area .news .selection ul li {
+main > .content .heart .news-area .news .selection ul li {
   background-color: #e4e4e4;
   color: #fff;
   font-size: 28px;
@@ -309,7 +364,7 @@ main .content .heart .news-area .news .selection ul li {
   margin: 0 auto;
   position: relative;
 }
-main .content .heart .news-area .news .selection ul li::after {
+main > .content .heart .news-area .news .selection ul li::after {
   content: "";
   position: absolute;
   width: 0;
@@ -321,13 +376,13 @@ main .content .heart .news-area .news .selection ul li::after {
   bottom: -17px;
   left: 71px;
 }
-main .content .heart .news-area .news .selection ul li[active] {
+main > .content .heart .news-area .news .selection ul li[class~=active] {
   background-color: #1393ca;
 }
-main .content .heart .news-area .news .selection ul li[active]::after {
+main > .content .heart .news-area .news .selection ul li[class~=active]::after {
   border-top: 8.5px solid #1393ca;
 }
-main .content .heart .news-area .news .selection span {
+main > .content .heart .news-area .news .selection span {
   color: #666666;
   border: 1px solid #1393ca;
   display: inline-block;
@@ -335,27 +390,35 @@ main .content .heart .news-area .news .selection span {
   width: 70px;
   text-align: center;
   line-height: 26px;
+  display: none;
 }
-main .content .heart .news-area .news .selection span a {
+main > .content .heart .news-area .news .selection span a {
   color: #666;
   transition: color 0.1s;
   text-decoration: none;
 }
-main .content .heart .news-area .news .selection span a:hover {
+main > .content .heart .news-area .news .selection span a:hover {
   color: #666;
 }
-main .content .heart .news-area .news .news-title {
-  padding-top: 12px;
+main > .content .heart .news-area .news .selection span.active {
+  display: block;
 }
-main .content .heart .news-area .news .news-title li {
+main > .content .heart .news-area .news .news-title {
+  padding-top: 12px;
+  display: none;
+}
+main > .content .heart .news-area .news .news-title.active {
+  display: block;
+}
+main > .content .heart .news-area .news .news-title li {
   line-height: 40px;
   height: 40px;
   border-bottom: 1px dashed #e5e5e5;
 }
-main .content .heart .news-area .news .news-title li:last-of-type {
+main > .content .heart .news-area .news .news-title li:last-of-type {
   border: none;
 }
-main .content .heart .news-area .news .news-title li a {
+main > .content .heart .news-area .news .news-title li a {
   display: flex;
   font-size: 16px;
   align-items: center;
@@ -364,11 +427,11 @@ main .content .heart .news-area .news .news-title li a {
   transition: color 0.1s;
   text-decoration: none;
 }
-main .content .heart .news-area .news .news-title li a span:nth-child(1) {
+main > .content .heart .news-area .news .news-title li a span:nth-child(1) {
   display: flex;
   align-items: center;
 }
-main .content .heart .news-area .news .news-title li a span:nth-of-type(1)::before {
+main > .content .heart .news-area .news .news-title li a span:nth-of-type(1)::before {
   content: "";
   border: solid;
   display: inline-block;
@@ -377,10 +440,10 @@ main .content .heart .news-area .news .news-title li a span:nth-of-type(1)::befo
   border-style: solid;
   transform: rotate(-90deg);
 }
-main .content .heart .news-area .news .news-title li a:hover span:nth-of-type(1)::before {
+main > .content .heart .news-area .news .news-title li a:hover span:nth-of-type(1)::before {
   content: "";
   border-color: #c81b15 transparent transparent transparent;
 }
-main .content .heart .news-area .news .news-title li a:hover {
+main > .content .heart .news-area .news .news-title li a:hover {
   color: #c81b15;
 }

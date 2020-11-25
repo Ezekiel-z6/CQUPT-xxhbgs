@@ -6,7 +6,7 @@ main {
     background-color: pink;
   }
 
-  .content {
+  &>.content {
     background-image: url('../imgs/bg.png');
     background-size: cover;
     background-position: 50% 50%;
@@ -20,7 +20,7 @@ main {
       .fn-area {
         user-select: none;
 
-        div {
+        div.it {
           border-bottom: 1px solid #dedede;
           text-align: center;
 
@@ -60,19 +60,80 @@ main {
             height: 55px;
             line-height: 55px;
             background-color: #ebebeb;
+            cursor: pointer;
 
             &:not(:last-child) {
               border-right: 2px solid #f6f6f6;
             }
 
-            &:hover {
+            &.active {
               background-color: $orange;
               color: #fff;
             }
           }
         }
 
-        ul.it-btn {}
+        .it-btn ul {
+          display: none;
+          margin-top: 38px;
+
+          &.active {
+            display: flex;
+            justify-content: space;
+            flex-wrap: wrap;
+          }
+
+          li {
+            display: flex;
+            flex-direction: column;
+            width: 193.33px;
+            height: 250px;
+            align-items: center;
+            background-color: #fff;
+            border: 1px solid transparent;
+
+            div {
+              background-color: $main-blue;
+              height: 120px;
+              width: 120px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              border-radius: 10000px;
+              overflow: hidden;
+              position: relative;
+              transition: background-color .1s;
+              cursor: pointer;
+
+              &::before {
+                content: '';
+                display: block;
+                height: 105px;
+                width: 105px;
+                border-radius: 1000px;
+                border: 1px solid #fff;
+                position: absolute;
+                top: 6.5px;
+                left: 6.5px;
+              }
+
+              &:hover {
+                background-color: $orange;
+              }
+
+            }
+
+            span {
+              display: block;
+              padding: 0 30px;
+              margin-top: 25px;
+              font-size: 20px;
+              color: #262626;
+              text-align: center;
+              line-height: 28px;
+            }
+          }
+        }
       }
 
       .news-area {
@@ -120,7 +181,7 @@ main {
                   left: 71px;
                 }
 
-                &[active] {
+                &[class~=active] {
                   background-color: $main-blue;
 
                   &::after {
@@ -138,15 +199,25 @@ main {
               width: 70px;
               text-align: center;
               line-height: 26px;
+              display: none;
 
               a {
                 @include hover-link(#666, #666)
+              }
+
+              &.active {
+                display: block;
               }
             }
           }
 
           .news-title {
             padding-top: 12px;
+            display: none;
+
+            &.active {
+              display: block;
+            }
 
             li {
               line-height: 40px;
