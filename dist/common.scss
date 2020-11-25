@@ -89,7 +89,7 @@ body {
 
 $header-top:148px;
 
-body{
+body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -162,6 +162,8 @@ header.head {
     background-color: $main-blue;
     user-select: none;
     height: 41px;
+    z-index: 1000;
+    position: relative;
 
     .menu {
       display: flex;
@@ -199,55 +201,66 @@ header.head {
   }
 }
 
-footer.foot{
+footer.foot {
   height: 223px;
   background-color: $bottom-blue;
   overflow: hidden;
-  .foot-container{
+
+  .foot-container {
     overflow: hidden;
     position: relative;
     text-align: center;
     height: 223px;
-    .foot-info{
+
+    .foot-info {
       overflow: hidden;
-      .foot-links{
+
+      .foot-links {
         margin-top: 46px;
         height: 60px;
         display: flex;
         justify-content: center;
-        li{
+
+        li {
           font-size: 24px;
           margin: 15px 0 20px 0;
-          a{
+
+          a {
             display: block;
             padding: 0 15px;
             border-right: 1px solid #fff;
             @include hover-link(#fff);
           }
-          &:last-child{
-            a{
+
+          &:last-child {
+            a {
               border: 0;
             }
           }
         }
       }
-      p{
+
+      p {
         margin: 0;
         color: #fff;
         font-size: 24px;
       }
-      .foot-copyright{
+
+      .foot-copyright {
         margin-top: 5px;
       }
-      .foot-record{
+
+      .foot-record {
         margin-top: 24px;
       }
     }
-    .qr-code{
+
+    .qr-code {
       position: absolute;
       top: 47px;
       right: 21px;
-      img{
+
+      img {
         width: 151px;
         height: 151px;
         background-color: pink;

@@ -110,6 +110,8 @@ header.head .head-nav {
   background-color: #1393ca;
   user-select: none;
   height: 41px;
+  z-index: 1000;
+  position: relative;
 }
 header.head .head-nav .menu {
   display: flex;
