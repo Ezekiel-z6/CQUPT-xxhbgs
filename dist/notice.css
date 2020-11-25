@@ -1,6 +1,11 @@
 @charset "UTF-8";
 @import 'normalize.css';
-@import '../font/index/iconfont.css';
+@font-face {
+  font-family: "iconfont";
+  /* project id 1927050 */
+  src: url("//at.alicdn.com/t/font_1927050_a5j8jn0az9.eot");
+  src: url("//at.alicdn.com/t/font_1927050_a5j8jn0az9.eot?#iefix") format("embedded-opentype"), url("//at.alicdn.com/t/font_1927050_a5j8jn0az9.woff2") format("woff2"), url("//at.alicdn.com/t/font_1927050_a5j8jn0az9.woff") format("woff"), url("//at.alicdn.com/t/font_1927050_a5j8jn0az9.ttf") format("truetype"), url("//at.alicdn.com/t/font_1927050_a5j8jn0az9.svg#iconfont") format("svg");
+}
 body,
 div,
 span,
@@ -213,6 +218,13 @@ footer.foot .foot-container .qr-code img {
   width: 151px;
   height: 151px;
   background-color: pink;
+}
+
+.main-container {
+  width: 100%;
+  background-image: url("../imgs/bg.png");
+  background-size: cover;
+  background-position: 50% 50%;
 }
 
 main {

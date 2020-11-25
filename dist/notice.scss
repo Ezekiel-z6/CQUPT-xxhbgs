@@ -1,5 +1,12 @@
 @import './common.scss';
 
+.main-container {
+  width: 100%;
+  background-image: url('../imgs/bg.png');
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
 main {
   flex: 1;
   width: 1334px;
