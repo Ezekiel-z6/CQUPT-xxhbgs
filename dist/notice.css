@@ -267,7 +267,7 @@ main article {
   width: 866px;
   min-height: 400px;
   margin-left: 54px;
-  margin-bottom: 58px;
+  margin-bottom: 48px;
 }
 main article .notice-list li {
   display: flex;
@@ -304,6 +304,7 @@ main article .notice-list li .notice-info a {
   display: block;
   font-size: 18px;
   font-weight: 700;
+  letter-spacing: 1.5px;
   color: #000;
   transition: color 0.1s;
   text-decoration: none;
@@ -313,6 +314,7 @@ main article .notice-list li .notice-info a:hover {
 }
 main article .notice-list li .notice-info .describe {
   font-size: 12px;
+  line-height: 20px;
   color: #7b7b7b;
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -324,4 +326,63 @@ main article .notice-list li:first-child {
 }
 main article .notice-list li:last-child {
   margin-bottom: 60px;
+}
+main article .pages {
+  display: flex;
+  justify-content: center;
+}
+main article .pages a {
+  display: block;
+  margin-right: 28px;
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+  text-align: center;
+  border: 1px solid #f0f0f0;
+  color: #000;
+  transition: color 0.1s;
+  text-decoration: none;
+  transition: all 0.1s;
+}
+main article .pages a:hover {
+  color: #fff;
+}
+main article .pages a:hover {
+  background-color: #1393ca;
+}
+main article .pages a.pre {
+  position: relative;
+}
+main article .pages a.pre::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 50%;
+  left: 50%;
+  border-left: 1.5px solid #000;
+  border-bottom: 1.5px solid #000;
+  transform: translate(-25%, -50%) rotate(45deg);
+}
+main article .pages a.pre:hover::before {
+  border-color: #fff;
+}
+main article .pages a.after {
+  position: relative;
+}
+main article .pages a.after::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 50%;
+  left: 50%;
+  border-top: 1.5px solid #000;
+  border-right: 1.5px solid #000;
+  transform: translate(-75%, -50%) rotate(45deg);
+}
+main article .pages a.after:hover::before {
+  border-color: #fff;
 }

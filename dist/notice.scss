@@ -49,7 +49,7 @@ main {
     width: 866px;
     min-height: 400px;
     margin-left: 54px;
-    margin-bottom: 58px;
+    margin-bottom: 48px;
 
     .notice-list {
       li {
@@ -90,11 +90,13 @@ main {
             display: block;
             font-size: 18px;
             font-weight: 700;
+            letter-spacing: 1.5px;
             @include hover-link(#000);
           }
 
           .describe {
             font-size: 12px;
+            line-height: 20px;
             color: #7b7b7b;
             display: -webkit-box;
             -webkit-box-orient: vertical;
@@ -110,6 +112,62 @@ main {
 
       & li:last-child {
         margin-bottom: 60px;
+      }
+    }
+    
+    .pages{
+      display: flex;
+      justify-content: center;
+      a{
+        display: block;
+        margin-right: 28px;
+        width: 48px;
+        height: 48px;
+        line-height: 48px;
+        text-align: center;
+        border: 1px solid #f0f0f0;
+        @include hover-link(#000,#fff);
+        transition: all .1s;
+        &:hover{
+          background-color: #1393ca;
+        }
+      }
+      a.pre{
+        position: relative;
+        &::before{
+          content: "";
+          display: block;
+          position: absolute;
+          width: 15px;
+          height: 15px;
+          top: 50%;
+          left: 50%;
+          border-left:1.5px solid #000;
+          border-bottom:1.5px solid #000;
+          transform:  translate(-25%,-50%) rotate(45deg);
+        }
+        &:hover::before{
+          border-color: #fff;
+        }
+      }
+
+      & a.after{
+        position: relative;
+        &::before{
+          content: "";
+          display: block;
+          position: absolute;
+          width: 15px;
+          height: 15px;
+          top: 50%;
+          left: 50%;
+          border-top:1.5px solid #000;
+          border-right:1.5px solid #000;
+          transform:  translate(-75%,-50%) rotate(45deg);
+        }
+        &:hover::before{
+          border-color: #fff;
+        }
       }
     }
   }
