@@ -169,6 +169,14 @@ main {
           border-color: #fff;
         }
       }
+      a.ellipsis{
+        border: 0;
+        cursor: default;
+        &:hover{
+          background-color: #fff;
+          color: #000;
+        }
+      }
     }
   }
 }

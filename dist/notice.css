@@ -386,3 +386,11 @@ main article .pages a.after::before {
 main article .pages a.after:hover::before {
   border-color: #fff;
 }
+main article .pages a.ellipsis {
+  border: 0;
+  cursor: default;
+}
+main article .pages a.ellipsis:hover {
+  background-color: #fff;
+  color: #000;
+}
