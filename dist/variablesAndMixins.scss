@@ -1,0 +1,42 @@
+// 定义一些颜色
+$background-color:#f6f6f6;
+$main-blue:#1393ca;
+$sub-blue:#39bffd;
+$bottom-blue:#0387eb;
+$orange:#fc8739;
+$red:#d1423d;
+$background-gray:#ebebeb;
+$font-color:#666666;
+$title-color:#333333;
+$border-color:#dedede;
+$dash-color:#e5e5e5;
+
+// 宽度
+$heart:1200px;
+
+// mixins
+// 链接的mixins
+@mixin hover-link($normal, $hover:$normal) {
+  color: $normal;
+  transition: color .1s;
+  text-decoration: none;
+
+  &:hover {
+    color: $hover;
+  }
+}
+
+// 菜单hover改变背景色
+@mixin hover-menu($normal, $hover) {
+  background-color: $normal;
+  transition: all .1s;
+
+  &:hover {
+    background-color: $hover;
+  }
+}
+
+// px2rem
+@function px2rem($px) {
+  @return $px/750*100rem;
+}

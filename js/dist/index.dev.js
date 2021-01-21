@@ -20,5 +20,11 @@ window.onload = function () {
       $(valueOfElement).addClass("active").siblings().removeClass("active");
       $(itContent).eq(indexInArray).addClass("active").siblings().removeClass("active");
     });
+  }); // Toggle
+
+  $(".toggle").click(function (e) {
+    e.preventDefault();
+    $(".head").toggleClass("show");
+    $(".toggle").toggleClass("show");
   });
 };
