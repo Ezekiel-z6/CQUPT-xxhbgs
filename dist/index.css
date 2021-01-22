@@ -13,6 +13,10 @@
   }
 }
 @media screen and (min-width: 501px) {
+  .loading {
+    display: none;
+  }
+
   main .banner {
     height: 642px;
     position: relative;
@@ -301,6 +305,10 @@
   main > .content .heart .news-area .news .news-title li a:hover {
     color: #c81b15;
   }
+  main > .content .heart .auto-generate-fn-panel,
+main > .content .heart .auto-generate-news-panel {
+    display: none;
+  }
 
   /* 自定义样式 */
   .pic > table > tbody > tr:nth-of-type(2) > td > div {
@@ -324,6 +332,376 @@
     font-size: 0;
     background: #dcdcdc;
     position: relative;
+  }
+
+  .imagechangenews_fnode::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: loading 4s linear;
+  }
+
+  .pic > table > tbody > tr:nth-of-type(1) > td > div {
+    overflow: visible !important;
+  }
+}
+@media screen and (max-width: 500px) {
+  @keyframes mob-loading {
+    0% {
+      height: 0;
+    }
+    50% {
+      height: 5rem;
+    }
+    100% {
+      height: 0;
+    }
+  }
+  .loading {
+    height: 100vh;
+    width: 100vw;
+    background-color: #1393ca;
+    position: fixed;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+  }
+  .loading ul {
+    display: flex;
+    margin-bottom: 20rem;
+    align-items: center;
+    height: 5rem;
+  }
+  .loading ul li {
+    width: 1.3333333333rem;
+    background-color: #fff;
+    margin: 1.0666666667rem;
+    border-radius: 100rem;
+  }
+  .loading ul li:nth-child(1n) {
+    animation: mob-loading 1s ease-in infinite;
+    animation-delay: 0.1s;
+  }
+  .loading ul li:nth-child(2n) {
+    animation: mob-loading 1s ease-in infinite;
+    animation-delay: 0.2s;
+  }
+  .loading ul li:nth-child(3n) {
+    animation: mob-loading 1s ease-in infinite;
+    animation-delay: 0.3s;
+  }
+  .loading ul li:nth-child(4n) {
+    animation: mob-loading 1s ease-in infinite;
+    animation-delay: 0.4s;
+  }
+  .loading ul li:nth-child(5n) {
+    animation: mob-loading 1s ease-in infinite;
+    animation-delay: 0.5s;
+  }
+  .loading ul li:nth-child(6n) {
+    animation: mob-loading 1s ease-in infinite;
+    animation-delay: 0.6s;
+  }
+  .loading ul li:nth-child(7n) {
+    animation: mob-loading 1s ease-in infinite;
+    animation-delay: 0.7s;
+  }
+  .loading ul li:nth-child(8n) {
+    animation: mob-loading 1s ease-in infinite;
+    animation-delay: 0.8s;
+  }
+  .loading ul li:nth-child(9n) {
+    animation: mob-loading 1s ease-in infinite;
+    animation-delay: 0.9s;
+  }
+  .loading ul li:nth-child(10n) {
+    animation: mob-loading 1s ease-in infinite;
+    animation-delay: 1s;
+  }
+  .loading .tip {
+    color: #fff;
+    font-size: 4rem;
+    letter-spacing: 0.2em;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  main .banner {
+    height: 46.6666666667rem;
+    position: relative;
+  }
+  main .banner ul.imgs {
+    position: relative;
+  }
+  main .banner ul.imgs li {
+    height: 46.6666666667rem;
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s;
+  }
+  main .banner ul.imgs li.active {
+    opacity: 1;
+    z-index: 100;
+  }
+  main .banner ul.imgs li img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+  }
+  main .banner ul.pointers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 6.6666666667rem;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+  }
+  main .banner ul.pointers li {
+    height: 1.3333333333rem;
+    width: 10.6666666667rem;
+    margin: 0 2.6666666667rem;
+    background-color: #dcdcdc;
+    cursor: pointer;
+  }
+  main .banner ul.pointers li.active::after {
+    content: "";
+    display: block;
+    animation: loading 5s linear;
+  }
+  main .content {
+    background-image: url("../imgs/bg.png");
+    background-size: cover;
+  }
+  main .content .fn-area {
+    display: none;
+  }
+  main .content .auto-generate-fn-panel {
+    border: 1px solid transparent;
+  }
+  main .content .auto-generate-fn-panel .it {
+    width: 100vw;
+    font-size: 4.2666666667rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 1.3333333333rem;
+    position: relative;
+  }
+  main .content .auto-generate-fn-panel .it:after {
+    content: "";
+    display: block;
+    height: 0.8rem;
+    width: 100vw;
+    background-color: #39bffd;
+    position: absolute;
+    z-index: -100;
+    bottom: 3.8666666667rem;
+  }
+  main .content .auto-generate-fn-panel .it div {
+    display: inline-block;
+    padding: 2rem 2.6666666667rem;
+    background-color: #1393ca;
+    color: #fff;
+    letter-spacing: 0.1em;
+  }
+  main .content .news-area {
+    display: none;
+  }
+  main .content .auto-generate-news-panel .bg-title {
+    width: 100vw;
+    font-size: 4.2666666667rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 1.3333333333rem;
+    position: relative;
+  }
+  main .content .auto-generate-news-panel .bg-title:after {
+    content: "";
+    display: block;
+    height: 0.8rem;
+    width: 100vw;
+    background-color: #39bffd;
+    position: absolute;
+    z-index: -100;
+    bottom: 3.8666666667rem;
+  }
+  main .content .auto-generate-news-panel .bg-title div {
+    display: inline-block;
+    padding: 2rem 2.6666666667rem;
+    background-color: #1393ca;
+    color: #fff;
+    letter-spacing: 0.1em;
+  }
+  main .content .auto-generate-news-panel .card {
+    padding: 4rem;
+  }
+  main .content .auto-generate-news-panel .card .news-title a {
+    color: #666;
+    text-decoration: none;
+    font-size: 3.7333333333rem;
+    line-height: 5.3333333333rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    letter-spacing: 0.1em;
+  }
+  main .content .auto-generate-news-panel .card .news-title a span:first-child {
+    display: inline-block;
+    width: 60vw;
+    white-space: nowrap;
+    text-emphasis: ellipsis;
+    overflow: hidden;
+  }
+  main .content .auto-generate-news-panel .card > span > a {
+    font-size: 3.7333333333rem;
+    color: #39bffd;
+    text-decoration: none;
+    line-height: 6.6666666667rem;
+  }
+
+  .card {
+    margin: 2.6666666667rem;
+    box-shadow: 0 0 6.6666666667rem rgba(0, 0, 0, 0.1);
+    border-radius: 0.6666666667rem;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  .card .title {
+    padding: 2.6666666667rem;
+    font-size: 3.7333333333rem;
+    letter-spacing: 0.1em;
+    border-bottom: 0.4rem solid #ccc;
+    color: #1393ca;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+  }
+  .card .title::before {
+    content: "";
+    margin-right: 1.3333333333rem;
+    display: block;
+    height: 2.6666666667rem;
+    width: 0.6666666667rem;
+    background-color: #1393ca;
+  }
+  .card .btns {
+    padding: 1.3333333333rem;
+    width: 100%;
+    display: inline-flex;
+    flex-wrap: wrap;
+  }
+  .card .btns li {
+    width: 25%;
+    padding: 1.3333333333rem;
+  }
+  .card .btns li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    font-size: 2.6666666667rem;
+    letter-spacing: 0.1em;
+  }
+  .card .btns li a div {
+    background-color: #1393ca;
+    width: 18vw;
+    height: 18vw;
+    border-radius: 1000rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .card .btns li a div:after {
+    content: "";
+    height: 14vw;
+    width: 14vw;
+    border: 0.6666666667rem solid #fff;
+    position: absolute;
+    border-radius: 100000rem;
+  }
+  .card .btns li a div:hover {
+    background-color: #fc8739;
+  }
+  .card .btns li a div img {
+    width: 10vw;
+    height: 10vw;
+    object-position: 50%;
+  }
+  .card .btns li a span {
+    margin-top: 0.8rem;
+    text-align: center;
+  }
+
+  /* 自定义样式移动端 */
+  .card .pic {
+    display: block !important;
+  }
+
+  .pic table,
+tbody {
+    width: 85rem !important;
+    height: 60rem !important;
+  }
+
+  .pic table tbody > tr > td > div:first-child,
+.pic table tbody > tr > td > div:first-child > div:first-child {
+    width: 85rem !important;
+    height: 60rem !important;
+  }
+
+  .pic img {
+    width: 85rem !important;
+    height: 60rem !important;
+  }
+
+  .pic table td,
+tbody,
+tr {
+    width: 85rem !important;
+  }
+
+  .pic > table > tbody > tr:nth-of-type(2) > td > div {
+    width: 85rem !important;
+    height: 5rem !important;
+    font-size: 2rem !important;
+    transform: translate(0, -7.4rem);
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .pic > table > tbody > tr:nth-of-type(2) > td > div > a {
+    font-size: 2rem !important;
+    letter-spacing: 0.1em;
+  }
+
+  .pic > table > tbody > tr:nth-of-type(1) > td > div > div:nth-of-type(2) {
+    width: 85rem !important;
+    display: flex;
+    justify-content: center;
+    transform: translate(0, 36px);
+    bottom: 5px;
+  }
+
+  .pic > table > tbody > tr:nth-of-type(1) > td > div > div:nth-of-type(2) > a {
+    display: block;
+    border: none;
+    font-size: 0;
+    background: #dcdcdc;
+    position: relative;
+    height: 1.3333333333rem;
+    width: 10.6666666667rem;
+    margin: 0 2.6666666667rem;
+    cursor: pointer;
   }
 
   .imagechangenews_fnode::after {

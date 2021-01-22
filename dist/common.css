@@ -267,6 +267,7 @@ header.head .head-top .toggle {
     background-color: #1393ca;
     transition: all 0.3s;
     top: 0;
+    z-index: 1000000000;
   }
   header.head.show {
     height: 100vh;
@@ -411,6 +412,7 @@ header.head .head-top .toggle {
   footer.foot .foot-container .foot-info .foot-copyright,
 footer.foot .foot-container .foot-info .foot-record {
     margin-top: 2.6666666667rem;
+    font-size: 2.6666666667rem;
     color: #fff;
   }
   footer.foot .foot-container .qr-code {
