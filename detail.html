@@ -1,83 +1,97 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>详情页</title>
-    <link rel="stylesheet" href="dist/detail.css" />
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-  </head>
-  <body>
-    <header class="head">
-      <div class="head-top heart">
-        <div class="logo"><img src="./imgs/logo.png" /></div>
-        <div class="search">
-          <input type="text" placeholder="请输入您要搜索的关键词" />
-          <button class="search-button">搜索</button>
-        </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>详情页</title>
+  <link rel="stylesheet" href="dist/detail.css" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <script src="js/jquery.min.js" defer></script>
+  <script src="js/common.js"></script>
+</head>
+
+<body>
+  <header class="head">
+    <div class="head-top heart">
+      <div class="logo"><img src="./imgs/logo.png" /></div>
+      <div class="logo-mobile"><a href=""><img src="./imgs/logo-mobile.png"></a></div>
+      <div class="search">
+        <input type="text" placeholder="请输入您要搜索的关键词" />
+        <button class="search-button">搜索</button>
       </div>
-      <nav class="head-nav">
-        <ul class="heart menu">
-          <li><a href="">首页</a></li>
-          <li><a href="">概况</a></li>
-          <li>
-            <a href="">服务</a>
-            <ul class="menu-sub">
-              <li><a href="">用户服务</a></li>
-              <li><a href="">单位服务</a></li>
-            </ul>
-          </li>
-          <li><a href="">工作动态</a></li>
-          <li><a href="">通知公告</a></li>
-          <li>
-            <a href="">教育信息化</a>
-            <ul class="menu-sub">
-              <li><a href="">安全快报</a></li>
-              <li><a href="">政策法规</a></li>
-            </ul>
-          </li>
-          <li><a href="">联系我们</a></li>
-        </ul>
-      </nav>
-    </header>
-
-    <div class="main-container">
-      <main>
-        <aside>
-          <div class="aside-hd">工作动态</div>
-          <ul class="aside-bd">
-            <li>
-              <a href="#">通知公告</a>
-            </li>
-          </ul>
-        </aside>
-
-        <article></article>
-      </main>
+      <div class="toggle"></div>
     </div>
-
-    <footer class="foot">
-      <div class="foot-container heart">
-        <div class="foot-info">
-          <ul class="foot-links">
-            <li>
-              <a href="#">联系方式</a>
-            </li>
-            <li>
-              <a href="#">反馈邮箱</a>
-            </li>
+    <nav class="head-nav">
+      <ul class="heart menu">
+        <li><a href="">首页</a></li>
+        <li><a href="">概况</a></li>
+        <li>
+          <a href="">服务</a>
+          <ul class="menu-sub">
+            <li><a href="">用户服务</a></li>
+            <li><a href="">单位服务</a></li>
           </ul>
+        </li>
+        <li><a href="">工作动态</a></li>
+        <li><a href="">通知公告</a></li>
+        <li>
+          <a href="">教育信息化</a>
+          <ul class="menu-sub">
+            <li><a href="">安全快报</a></li>
+            <li><a href="">政策法规</a></li>
+          </ul>
+        </li>
+        <li><a href="">联系我们</a></li>
+      </ul>
+    </nav>
+  </header>
 
-          <p class="foot-copyright">
-            版权所有 重庆邮电大学 地址：重庆市南岸区崇文路2号 邮编：400065
-          </p>
-          <p class="foot-record">渝ICP备 05001043号</p>
-        </div>
+  <div class="main-container">
+    <main>
+      <aside>
+        <div class="aside-hd">工作动态</div>
+        <ul class="aside-bd">
+          <li>
+            <a href="#">通知公告</a>
+          </li>
+          <li>
+            <a href="#">通知公告</a>
+          </li>
+        </ul>
+      </aside>
 
-        <div class="qr-code">
-          <img src="./imgs/qrcode.png" alt="二维码" />
-        </div>
+      <article>
+        世界杯之际，腾讯 QQ 推出了 “QQ-AR 穿越赛场” 活动，手机 QQ 扫一扫功能，能够穿越 “任
+          意门” 到达足球赛场体验比赛乐趣。“QQ-AR 穿越赛场” 玩法是基于手机 QQ 和腾讯音视频实验室来
+          联合开发的 “手势 AI 识别跟踪” 技术实现，“任意门”玩法和 “手势 AI 识别跟踪” 技术，在行
+          业内还是首创。
+          我们上手试玩了一下，发现我们穿越进入球场后，不仅进了个球，还上了 “报纸头条”。
+      </article>
+    </main>
+  </div>
+
+  <footer class="foot">
+    <div class="foot-container heart">
+      <div class="foot-info">
+        <ul class="foot-links">
+          <li>
+            <a href="#">联系方式</a>
+          </li>
+          <li>
+            <a href="#">反馈邮箱</a>
+          </li>
+        </ul>
+
+        <p class="foot-copyright">版权所有 重庆邮电大学 地址：重庆市南岸区崇文路2号 邮编：400065</p>
+        <p class="foot-record">渝ICP备 05001043号</p>
       </div>
-    </footer>
-  </body>
+
+      <div class="qr-code">
+        <img src="./imgs/qrcode.png" alt="二维码">
+      </div>
+    </div>
+  </footer>
+</body>
+
 </html>
